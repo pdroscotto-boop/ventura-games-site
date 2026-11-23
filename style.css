@@ -1,6 +1,6 @@
 /* =========================================
    VENTURA GAMES — ESTILOS BASE
-   Cole este bloco NO INÍCIO do style.css
+   Arquivo completo: substitua o style.css por este
    ========================================= */
 
 :root{
@@ -153,4 +153,68 @@ main section[data-page]:not([aria-current="page"]){display:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .orbit,.pulse,.status-light{animation:none!important}
+}
+
+/* =========================================
+   TECHNICAL ERROR — CARTÃO DO PROJETO
+   ========================================= */
+.te-page{padding-top:82px;padding-bottom:80px;border-top:1px solid var(--line)}
+.te-topline,.te-bottom{display:flex;justify-content:space-between;align-items:center;gap:18px;color:#8290A6;font:800 9px/1.5 var(--font);letter-spacing:.16em}
+.te-topline{padding-bottom:18px;border-bottom:1px solid var(--line)}
+.te-card{max-width:900px;margin:48px auto 34px;overflow:hidden;border:1px solid rgba(255,132,48,.34);background:radial-gradient(ellipse at 90% 0%,rgba(255,111,25,.10),transparent 42%),linear-gradient(135deg,#17191D,#0B0D11 68%);box-shadow:0 24px 70px rgba(0,0,0,.24);transition:border-color .28s ease,box-shadow .28s ease,transform .28s ease}
+.te-card:hover{border-color:rgba(255,145,65,.62);box-shadow:0 28px 80px rgba(0,0,0,.32),0 0 32px rgba(255,112,30,.07);transform:translateY(-3px)}
+.te-card-content{position:relative;padding:43px 48px 36px}
+.te-card-content::after{content:"TE";position:absolute;right:35px;top:32px;color:rgba(255,255,255,.035);font:700 clamp(90px,15vw,160px)/1 var(--display);letter-spacing:-.1em;pointer-events:none}
+.te-card-top{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.te-label,.te-development{font:800 9px/1.4 var(--font);letter-spacing:.16em}
+.te-label{color:#F0A16C}
+.te-development{display:inline-flex;align-items:center;gap:8px;color:#A9B0BA}
+.te-development i{width:6px;height:6px;border-radius:50%;background:#FF873D;box-shadow:0 0 12px rgba(255,135,61,.8)}
+.te-title{position:relative;z-index:1;margin:34px 0 8px;color:#F5F5F3;font:700 clamp(42px,7vw,70px)/.98 var(--display);letter-spacing:-.065em}
+.te-title span{color:#FF873D}
+.te-slogan{position:relative;z-index:1;margin:17px 0 20px;color:#FF9A59;font:800 10px/1.5 var(--font);letter-spacing:.2em}
+.te-short-description{position:relative;z-index:1;max-width:540px;margin:0;color:#AEB4BE;font-size:14px;line-height:1.9}
+.te-colors{position:relative;z-index:1;display:flex;align-items:center;gap:9px;margin-top:30px}
+.te-color{display:block;width:19px;height:19px;border:1px solid rgba(255,255,255,.24);border-radius:50%}
+.te-orange{background:#FF873D}.te-black{background:#090A0C}.te-gray{background:#777D85}
+.te-color-label{margin-left:7px;color:#828B98;font:800 8px/1.4 var(--font);letter-spacing:.15em}
+.te-expand{border-top:1px solid rgba(255,135,61,.2);background:rgba(255,255,255,.018)}
+.te-expand summary{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:21px 48px;color:#F2F2F0;cursor:pointer;list-style:none;transition:background .25s ease,padding .25s ease}
+.te-expand summary::-webkit-details-marker{display:none}
+.te-expand summary:hover{padding-left:54px;padding-right:54px;background:rgba(255,135,61,.075)}
+.te-expand summary:focus-visible{outline:2px solid #FF873D;outline-offset:-4px}
+.te-expand-label{color:#FF9A59;font:800 10px/1.4 var(--font);letter-spacing:.17em}
+.te-expand-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(255,135,61,.42);border-radius:50%;color:#FF9A59;font:400 21px/1 var(--font);transition:transform .28s ease,background .28s ease,color .28s ease}
+.te-expand[open] .te-expand-icon{transform:rotate(45deg);color:#101114;background:#FF873D}
+.te-expanded-content{padding:8px 48px 38px;animation:teReveal .3s ease both}
+@keyframes teReveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+.te-expanded-kicker{display:block;margin:10px 0 18px;color:#A06B4B;font:800 8px/1.5 var(--font);letter-spacing:.18em}
+.te-expanded-content h3{margin:0 0 18px;color:#F1F1EF;font:700 clamp(22px,4vw,31px)/1.15 var(--display);letter-spacing:-.035em}
+.te-expanded-content p{max-width:690px;margin:0 0 13px;color:#AEB4BE;font-size:13px;line-height:1.9}
+.te-expanded-footer{display:grid;grid-template-columns:105px 1fr 105px 1fr;gap:12px;align-items:center;margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.09)}
+.te-expanded-footer span{color:#777F8A;font:800 8px/1.5 var(--font);letter-spacing:.14em}
+.te-expanded-footer strong{color:#E1E2E2;font:800 9px/1.5 var(--font);letter-spacing:.06em}
+.te-bottom{padding-top:17px;border-top:1px solid var(--line);color:#707D91}
+@media (max-width:800px){
+.te-page{padding-top:55px;padding-bottom:60px}
+.te-card{margin:32px auto 27px}
+.te-card-content{padding:30px 27px 27px}
+.te-card-content::after{right:20px;top:38px;font-size:100px}
+.te-expand summary{padding:19px 27px}
+.te-expand summary:hover{padding-left:31px;padding-right:31px}
+.te-expanded-content{padding:5px 27px 30px}
+.te-expanded-footer{grid-template-columns:90px 1fr}
+}
+@media (max-width:480px){
+.te-topline,.te-bottom{font-size:7px;letter-spacing:.1em}
+.te-card-top{align-items:flex-start;flex-direction:column;gap:10px}
+.te-title{font-size:clamp(37px,11vw,52px)}
+.te-short-description{font-size:12px}
+.te-color-label{font-size:7px}
+.te-expanded-footer{grid-template-columns:1fr;gap:6px}
+.te-expanded-footer strong{margin-bottom:10px}
+}
+@media (prefers-reduced-motion:reduce){
+.te-card,.te-expand summary,.te-expand-icon{transition:none!important}
+.te-expanded-content{animation:none!important}
 }
