@@ -373,3 +373,13 @@
   outline: 2px solid #8BC2FF;
   outline-offset: 4px;
 }
+
+
+/* Correção da navegação durante a rolagem */
+.site-header.is-scrolled .header-navigation {
+    transform: none !important;
+}
+
+.site-header.is-scrolled .main-nav .nav-link.active {
+    transform: none !important;
+}
